@@ -59,7 +59,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body d-flex flex-column text-black">
-                    <pre>
+                    <pre class="text-center my-5 text-wrap" style="font-family: sans-serif;font-size: 1.125rem">
                         {{ $event->terms }}
                     </pre>
 
