@@ -45,6 +45,7 @@ class EventCard extends Component
             'answer' => $this->answer,
         ]);
 
+
         if ($this->event->need_upload) {
             $extension = $this->photo->getClientOriginalExtension();
             $newname = Auth::user()->name . time() . ".$extension";
@@ -54,10 +55,7 @@ class EventCard extends Component
             $comment->image = $image_path;
             $comment->save();
         }
-
         $this->participated = true;
-
-        
 
         return redirect("/event");
     }

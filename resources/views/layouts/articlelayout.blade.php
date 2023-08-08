@@ -140,9 +140,14 @@
 
                                     <li class="nav-item ms-auto align-middle d-none d-lg-block">
                                         @guest
-                                            <a href="{{ route('login') }}" class="nav-link">
-                                                <button class="btn text-white register-button">MASUK</button>
-                                            </a>
+                                            <div class="d-flex gap-1">
+                                                <a href="{{ route('register') }}" class="nav-link">
+                                                    <button class="btn text-white register-button">DAFTAR</button>
+                                                </a>
+                                                <a href="{{ route('login') }}" class="nav-link">
+                                                    <button class="btn text-white register-button">MASUK</button>
+                                                </a>
+                                            </div>
                                         @endguest
                                         @auth
                                             <div class="dropdown">

@@ -13,14 +13,14 @@
                 <label for="username">Username</label>
                 <input type="text" class="form-control" id="username" name="username" required>
                 @error('username')
-                    <span class="error text-danger">{{ $message }}</span>
+                    <span class="error text-danger">{{ $error->message }}</span>
                 @enderror
             </div>
             <div class="mt-4">
                 <label for="password">Password</label>
                 <input type="password" class="form-control" id="password" name="password" required>
                 @error('password')
-                    <span class="error text-danger">{{ $message }}</span>
+                    <span class="error text-danger">{{ $error->message }}</span>
                 @enderror
             </div>
             <div class="mt-4">
@@ -28,7 +28,7 @@
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
                     required>
                 @error('password_confirmation')
-                    <span class="error text-danger">{{ $message }}</span>
+                    <span class="error text-danger">{{ $error->message }}</span>
                 @enderror
             </div>
 
@@ -36,7 +36,7 @@
                 <label for="phone_number">Nomor Handphone</label>
                 <input type="numeric" class="form-control" id="phone_number" name="phone_number" required>
                 @error('phone_number')
-                    <span class="error text-danger">{{ $message }}</span>
+                    <span class="error text-danger">{{ $error->message }}</span>
                 @enderror
             </div>
 

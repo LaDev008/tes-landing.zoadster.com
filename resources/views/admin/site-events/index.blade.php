@@ -1,4 +1,4 @@
-@extends('layouts.adminlayout')
+    @extends('layouts.adminlayout')
 @section('title', 'EVENT LIST')
 @section('content')
     <div class="col-12">

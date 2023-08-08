@@ -118,7 +118,7 @@
                                         <div class="mt-2 text-start">
                                             <label for="photo" class="fw-bold">BUKTI SHARE</label>
                                             <input type="file" class="form-control" id="photo" wire:model="photo"
-                                                accept=".jpg,.jpeg,.png">
+                                                accept=".jpg,.jpeg,.png" required>
                                         </div>
                                     @endif
                                     <div class="col-12 text-center mt-4">
@@ -216,12 +216,20 @@
         const myModal = new bootstrap.Modal(document.getElementById('winnerList{{ $event->id }}'), options)
     </script>
 
+    <style>
+        .event-title {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+
 
     <div class="col-12 p-5" style="border: 6px ridge goldenrod">
         <div class="d-flex flex-column gap-2">
             <div class="d-flex flex-column">
-                <img src="{{ $event->image }}" class="col-6 col-lg-6 mx-auto">
-                <h4 class="text-white mt-3">{{ $event->title }}</h4>
+                <img src="{{ $event->image }}" class="col-6 col-lg-6 mx-auto" width="260px" height="260px">
+                <h4 class="text-white mt-3 event-title">{{ $event->title }}</h4>
                 <label>{{ date('d F Y', strtotime($event->date)) }}</label>
                 <label>Status: <span
                         class="text-{{ $event->status->color }} fw-bold">{{ $event->status->name }}</span></label>

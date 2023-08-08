@@ -114,6 +114,7 @@
                     <td>16.00 WIB</td>
                     <td>19.00 WIB</td>
                     <td>22.00 WIB</td>
+                    <td>23.00 WIB</td>
                 </tr>
                 <tr>
                     <td>
@@ -146,6 +147,13 @@
                     </td>
                     <td>
                         @if ($macau5 == 0)
+                            <x-loader />
+                        @else
+                            {{ $macau5 }}
+                        @endif
+                    </td>
+                    <td>
+                        @if ($macau6 == 0)
                             <x-loader />
                         @else
                             {{ $macau5 }}

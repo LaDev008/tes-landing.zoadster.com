@@ -34,7 +34,8 @@ class AuthController extends Controller
         Auth::login($user);
         $request->session()->regenerate();
 
-        return redirect()->route('home');
+
+        return redirect()->back();
     }
 
     public function login()
@@ -53,9 +54,8 @@ class AuthController extends Controller
             $request->session()->regenerate();
 
             if (Auth::user()->role_id == 6) {
-                return redirect()->route('home');
+                return redirect()->back();
             } else {
-
                 return redirect()->intended('/admin/dashboard');
             }
         }
@@ -71,6 +71,6 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect()->back();
     }
 }

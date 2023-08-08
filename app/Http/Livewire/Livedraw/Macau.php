@@ -44,9 +44,10 @@ class Macau extends Component
         $result[3] = intval(substr($split4[3], 0, 4));
         $result[4] = intval(substr($split4[4], 0, 4));
         $result[5] = intval(substr($split4[5], 0, 4));
+        $result[6] = intval(substr($split4[6], 0, 4));
 
 
-        foreach (range(1, 5) as $item) {
+        foreach (range(1, 6) as $item) {
 
             if (Str::length($result[$item]) == 3) {
                 $result[$item] = "0$result[$item]";
@@ -60,6 +61,7 @@ class Macau extends Component
             "macau3" => $result[3],
             "macau4" => $result[4],
             "macau5" => $result[5],
+            "macau6" => $result[6],
             "title" => $title,
         ];
     }
